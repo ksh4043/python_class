@@ -1,7 +1,7 @@
 # week13_C_01.py
 
-# id: 202444099
-# name: park soi
+# id: 202444091
+# name: kim si hyeon
 
 import datetime 
 
