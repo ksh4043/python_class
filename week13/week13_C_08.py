@@ -7,7 +7,7 @@ import datetime
 import os
 from datetime import datetime as dt
 
-mypath = "c:\\book1_202444099"
+mypath = "c:\\book1_202444091"
 myfile = "list.txt"
 fullfile = os.path.join(mypath, myfile)
 
