@@ -1,7 +1,7 @@
 # week13_01.py
 
-# id: 202444099
-# name: park soi
+# id: 202444091
+# name: kim si hyeon
 
 import datetime
 from datetime import datetime as dt
