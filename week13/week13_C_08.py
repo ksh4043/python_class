@@ -12,7 +12,7 @@ myfile = "list.txt"
 fullfile = os.path.join(mypath, myfile)
 
 
-if __main__ == "__name__":
+if __name__ == "__main__":
     if not os.path.isdir(mypath):
         os.mkdir(mypath)
     
