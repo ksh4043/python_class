@@ -37,7 +37,7 @@ def search_contact(contact_datas):
         if target == contact["p_num"] or target == contact["name"]:
             print(f"이름: {contact['name']} 전화번호: {contact['p_num']} 이메일: {contact['email']}")
             found = True
-    if not found:
+    if found:
         print("결과가 없습니다.")
     print()
 
