@@ -109,7 +109,7 @@ if __name__ == "__main__":
         book.add_timestamp(intime, outtime)
 
         book_fullname = os.path.join(mypath, number + ".txt")
-        with open(book_fullname, "a",, encoding = "UTF-8") as f:
+        with open(book_fullname, "a", encoding = "UTF-8") as f:
             intime = dt.strftime(intime, str_fmt)
             if outtime:
                 outtime = dt.strftime(outtime, str_fmt)
