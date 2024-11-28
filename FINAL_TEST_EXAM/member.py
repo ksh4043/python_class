@@ -12,4 +12,4 @@ class Member:
     
 
     def gen_file_record(self):
-        return f"{self.id}|{self.gender}|{self.height}|{self.weight}"
+        return f"{self.id}|{self.gender}|{self.height}|{self.weight}\n"
