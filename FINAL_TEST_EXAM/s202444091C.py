@@ -72,30 +72,29 @@ def modify():
 
 def show_members():
     if mlt:
-        i = 1
         m_data = []
         m_chart = []
         w_data = []
         w_chart = []
-        for m in mlt:
+        for i, m in enumerate(mlt):
             if m.gender == 'M':
-                m_data.append(f"[{i}] 아이디 : {m.id} 신장 : {m.height} 체중 : {m.weight} BMI : {m.calc_BMI():.2f}")
+                m_data.append(f"[{i+1}] 아이디 : {m.id} 신장 : {m.height} 체중 : {m.weight} BMI : {m.calc_BMI():.2f}")
                 m_chart.append(int(m.calc_BMI()))
             else:
-                w_data.append(f"[{i}] 아이디 : {m.id} 신장 : {m.height} 체중 : {m.weight} BMI : {m.calc_BMI():.2f}")
+                w_data.append(f"[{i+1}] 아이디 : {m.id} 신장 : {m.height} 체중 : {m.weight} BMI : {m.calc_BMI():.2f}")
                 w_chart.append(int(m.calc_BMI()))
         print("[전체 상태 조회]")
         print("=" * 40)
 
         print("[남성]")
         for i in range(len(m_data)):
-            print(f"[{i+1}] {m_data[i]}")
+            print(f"{m_data[i]}")
             print("도표 :", "*" * m_chart[i])
             print()
 
         print("[여성]")
         for i in range(len(w_data)):
-            print(f"[{i+1}] {w_data[i]}")
+            print(f"{w_data[i]}")
             print("도표 :", "*" * w_chart[i])
             print()
         
@@ -138,7 +137,8 @@ def load_data(fullfile):
         with open(fullfile, 'r') as f:
             for datas in f:
                 split_datas = datas.strip().split("|")
-                mlt.append(member.Member(split_datas[0].split(), split_datas[1].split(), split_datas[2].split(), split_datas[3].split()))
+                mlt.append(member.Member(split_datas[0], split_datas[1], float(split_datas[2]), int(split_datas[3])))
+        print(f"{len(mlt)}건의 데이터를 복원했습니다.")
 
 
 if __name__ == "__main__":
