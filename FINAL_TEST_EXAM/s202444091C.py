@@ -64,6 +64,7 @@ def modify():
                     print("체중이 잘못 입력되었습니다.")
                     return False
                 print("입력한 정보를 바탕으로 계산한 BMI 수치", m.calc_BMI())
+                break
             else:
                 print("회원 정보가 없습니다.")
     else:
